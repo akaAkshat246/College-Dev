@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "project": "SwachhRoute Delhi",
+    "tagline": "Collect when needed. Route smart. Prove it's clean.",
+    "subtitle": "An AI-assisted waste collection platform for Delhi, built on Dijkstra routing.",
+    "team": "CodeGoblins",
+    "members": [
+      { "name": "Akshat Kumar", "role": "Backend and Routing Lead", "focus": "Dijkstra, VRP Multi-Truck Planner, REST APIs" },
+      { "name": "Akshat Vats", "role": "ML Engineer", "focus": "Overflow Forecasting, Vision Material Classification" },
+      { "name": "Akshay Yadav", "role": "Frontend & Mobile Lead", "focus": "MCD Command Center, PWA Worker App, Interactive Map" }
+    ],
+    "date": "October 2026",
+    "version": "2.0.0"
+  },
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "SwachhRoute Delhi",
+      "subtitle": "Collect when needed. Route smart. Prove it's clean.",
+      "description": "An AI-assisted waste collection platform for Delhi, built on Dijkstra routing.",
+      "speakerNote": "Open with one sentence: 'Delhi's trucks drive fixed routes while bins overflow elsewhere. We fix that.'",
+      "bullets": [
+        "Real-time IoT smart bin telematics across 14 Delhi localities",
+        "Dijkstra-powered shortest path and multi-truck fleet routing",
+        "Dynamic landfill load balancing for Ghazipur, Bhalswa & Okhla",
+        "Photo-verified citizen grievance resolution with cryptographic proof"
+      ]
+    },
+    {
+      "slideNumber": 2,
+      "title": "The Problem",
+      "subtitle": "Delhi's garbage chain breaks at five critical points.",
+      "speakerNote": "Pick one story the judges will recognise, such as an overflowing bin near a market, and tell it in two sentences.",
+      "bullets": [
+        "Fixed-schedule pickups: Some bins overflow while other trucks run half-empty.",
+        "Three overloaded landfills (Ghazipur, Bhalswa, Okhla) and mostly mixed waste.",
+        "Illegal dumping spots keep returning, with zero data on root causes.",
+        "Complaints get lost, and nobody verifies they were actually resolved on-ground.",
+        "Trucks and workers are barely tracked, so municipal accountability is weak."
+      ]
+    },
+    {
+      "slideNumber": 3,
+      "title": "Why Now?",
+      "subtitle": "The tools to solve Delhi's waste gridlock are finally cheap and open.",
+      "speakerNote": "The point is that this was not practical a few years ago, and now a small team can build it.",
+      "bullets": [
+        "Low-power bin sensors (LoRa, ultrasonic) are affordable at city scale ($12-$20/unit).",
+        "Open road data (OpenStreetMap) and fast routing engines (Dijkstra, OSRM, OR-Tools) exist.",
+        "Vision AI can check a photo of a dump or a cleaned spot in milliseconds.",
+        "WhatsApp and voice reach workers who do not use complex English smartphone apps.",
+        "Landfill pressure makes every wasted trip and unsegregated tonne costly for MCD."
+      ]
+    },
+    {
+      "slideNumber": 4,
+      "title": "The Solution",
+      "subtitle": "SwachhRoute decides when to collect, which route to take, and where to unload, then proves the job was done.",
+      "speakerNote": "Show the interactive prototype here if time allows.",
+      "bullets": [
+        "Collect only bins that are full or about to overflow, not on a blind fixed schedule.",
+        "Build the shortest multi-stop route with Dijkstra and multi-truck time windows.",
+        "Send each truck to the landfill with capacity and shortest queue, not just the nearest one.",
+        "Let citizens report waste and receive AI photo proof with SHA-256 certificate upon cleanup."
+      ]
+    },
+    {
+      "slideNumber": 5,
+      "title": "Nine Features, One Platform",
+      "subtitle": "Modular, end-to-end municipal waste intelligence suite.",
+      "speakerNote": "Do not read the table. Name the three groups (Smart Collection, Trust & Proof, People & Accountability) and give one example from each.",
+      "features": [
+        { "code": "F1", "group": "Smart Collection", "name": "Fill Prediction", "description": "Forecasts which bins fill next using history, festivals (Diwali/Holi) and weather." },
+        { "code": "F2", "group": "Smart Collection", "name": "Multi-Truck Routing", "description": "Dijkstra distances plus vehicle routing planner with time windows." },
+        { "code": "F3", "group": "Smart Collection", "name": "Lane-Aware Routing", "description": "Traffic-aware edges and the right vehicle size (E-rickshaw vs tipper vs compactor) for narrow lanes." },
+        { "code": "F4", "group": "Smart Collection", "name": "Landfill Balancing", "description": "Picks unload site among Ghazipur, Bhalswa, Okhla by distance, queue and remaining capacity." },
+        { "code": "F5", "group": "Trust & Proof", "name": "Photo-Verified Complaints", "description": "Citizen photo in, cleaned-spot photo out, AI checks both and issues SHA-256 certificate." },
+        { "code": "F6", "group": "Trust & Proof", "name": "Dumping Heatmap", "description": "Shows repeat hotspots to place smart bins, CCTV or night sanitation patrols." },
+        { "code": "F7", "group": "Trust & Proof", "name": "Segregation Intelligence", "description": "Labels wet, dry and hazardous waste with scrap valuation in ₹." },
+        { "code": "F8", "group": "People & Accountability", "name": "Worker Layer", "description": "Hindi app, WhatsApp alerts and IVR voice broadcasts, works offline." },
+        { "code": "F9", "group": "People & Accountability", "name": "Ward Dashboard", "description": "Ranks MCD wards on km saved, diesel, CO2 averted, overflow rate and SLA closure." }
+      ]
+    },
+    {
+      "slideNumber": 6,
+      "title": "How It Works",
+      "subtitle": "6-stage autonomous workflow from sensor telemetry to municipal dashboard.",
+      "speakerNote": "Emphasise that Dijkstra is the core, and the other layers make it practical for a real city.",
+      "bullets": [
+        "1. Bin sensors and citizen reports stream real-time data to one unified API layer.",
+        "2. The forecast model predicts which bins will cross overflow threshold at pickup time.",
+        "3. Dijkstra builds a travel-time matrix on the Delhi road graph per vehicle type.",
+        "4. The planner assigns bins to trucks under capacity and shift time limits.",
+        "5. When a truck is full, the system dynamically picks the best landfill and inserts the unload stop.",
+        "6. Workers get the plan by app, WhatsApp or voice; officers see real-time progress on the dashboard."
+      ]
+    },
+    {
+      "slideNumber": 7,
+      "title": "Product Demo & Technology",
+      "subtitle": "Interactive Delhi map with 14 locality bins, a central depot, and three landfills.",
+      "speakerNote": "Tell judges the prototype uses simulated fill levels and realistic distances, and that the production version integrates OpenStreetMap feeds and live LoRaWAN sensors.",
+      "bullets": [
+        "Interactive Delhi map: 14 localities, central depot (IP Estate), 3 landfills (Ghazipur, Bhalswa, Okhla).",
+        "Live Dijkstra routing animation with step-by-step waypoint traversal.",
+        "Direct comparison: AI-optimized Dijkstra route saves 29.6% km and 35% fuel vs naive fixed route.",
+        "Tech Stack: FastAPI, Node/Express REST API, Leaflet GIS, React + Tailwind, Python Vision AI."
+      ]
+    },
+    {
+      "slideNumber": 8,
+      "title": "What Makes It Different",
+      "subtitle": "Most smart-bin projects stop at 'bin is full, send a truck'. We go much further.",
+      "speakerNote": "Be candid that Dijkstra alone is not new. The novelty is combining prediction, planning, landfill balancing and verified proof in one Delhi-specific system.",
+      "comparisons": [
+        { "aspect": "Collection Trigger", "others": "React to current sensor reading", "swachhRoute": "Predict fill levels ahead of time using festival & weather factors" },
+        { "aspect": "Routing", "others": "Plain shortest path", "swachhRoute": "Dijkstra matrix + multi-truck planner with capacity & time windows" },
+        { "aspect": "Unload Destination", "others": "Nearest landfill blindly", "swachhRoute": "Landfill chosen dynamically by weighbridge queue, capacity & distance" },
+        { "aspect": "Grievance Closure", "others": "Closed manually by staff without proof", "swachhRoute": "Closed only with AI-checked before/after photo proof & SHA-256 seal" },
+        { "aspect": "Hotspot Data", "others": "No historical data on chronic dumping", "swachhRoute": "Dumping heatmap with automated MCD intervention recommendations" },
+        { "aspect": "Worker Accessibility", "others": "English-only smartphone apps", "swachhRoute": "Hindi UI, WhatsApp bot, IVR voice alerts & offline sync" },
+        { "aspect": "Accountability", "others": "Hidden performance data", "swachhRoute": "Public MCD Ward Scorecard ranking 12 wards transparently" }
+      ]
+    },
+    {
+      "slideNumber": 9,
+      "title": "Market & Customers",
+      "subtitle": "Primary customer: Delhi's municipal bodies, starting with one willing MCD ward.",
+      "speakerNote": "Avoid quoting large market numbers you cannot source. A clear, bottom-up logic is more credible than a big figure.",
+      "bullets": [
+        "Primary customer: Municipal Corporation of Delhi (MCD) across 12 administrative zones.",
+        "Next customers: Other Indian Smart Cities, private waste contractors, RWAs, universities and industrial parks.",
+        "Sizing model: Bins in pilot ward × fee per bin/month + Trucks in fleet × fee per truck/month."
+      ]
+    },
+    {
+      "slideNumber": 10,
+      "title": "Business Model",
+      "subtitle": "Sustainable software-as-a-service (SaaS) for municipal bodies and contractors.",
+      "speakerNote": "State that pricing will be set from pilot cost savings, since fuel savings per truck is the real value anchor.",
+      "bullets": [
+        "Platform Subscription: Annual software fee per bin and per truck.",
+        "Pilot Setup & Sensor Integration: One-time deployment fee + hardware at cost.",
+        "Premium Modules: Urban planning analytics, carbon credit certification, API integrations.",
+        "Sponsored Programs: Corporate CSR and Extended Producer Responsibility (EPR) partners."
+      ]
+    },
+    {
+      "slideNumber": 11,
+      "title": "Competition & Positioning",
+      "subtitle": "SwachhRoute is positioned in the high-intelligence, high-verification quadrant.",
+      "speakerNote": "Name real competitors you have researched when you present, and say specifically what they do not cover.",
+      "bullets": [
+        "Citizen Complaint Apps (Swachhata App): Lacks routing intelligence and predictive dispatch.",
+        "Basic Smart-Bin Hardware Sellers: Sell sensors without route optimization or landfill balancing.",
+        "Fleet Tracking Software (GPS only): Tracks trucks without fill prediction or photo-proof verification.",
+        "SwachhRoute Delhi: Combines predictive routing with verified visual proof in one system."
+      ]
+    },
+    {
+      "slideNumber": 12,
+      "title": "Go-To-Market Strategy",
+      "subtitle": "5-phase rollout from single-ward pilot to NCT-wide scale.",
+      "speakerNote": "Be clear that government sales are slow, which is why private campuses and societies are the early revenue path.",
+      "bullets": [
+        "1. Pilot Ward: Agree on clear baseline success metrics with one MCD Ward Officer (e.g. Ward 112 CP).",
+        "2. Fast-Moving Customers: Deploy on large university campuses, tech parks, and gated societies.",
+        "3. Government Route: Leverage India Smart Cities Challenge and MCD Innovation MoU.",
+        "4. Field Partners: Onboard local waste-picker collectives and informal sector aggregators.",
+        "5. Proof as Marketing: The public ward scorecard shows hard results and creates demand from neighbouring wards."
+      ]
+    },
+    {
+      "slideNumber": 13,
+      "title": "Impact & Success Metrics",
+      "subtitle": "Proving measurable ROI within 90 days in the pilot ward.",
+      "speakerNote": "Say clearly that these are goals to be measured against baseline.",
+      "metrics": [
+        { "label": "Collection distance per tonne", "target": "20–30% lower" },
+        { "label": "Bin overflow incidents per week", "target": "50% lower" },
+        { "label": "Fill-forecast error (MAE)", "target": "Under 10 percentage points" },
+        { "label": "Complaints closed with photo proof", "target": "80% within 48 hours" },
+        { "label": "Worker app adoption rate", "target": "70% of pilot crews" }
+      ]
+    },
+    {
+      "slideNumber": 14,
+      "title": "Project Roadmap",
+      "subtitle": "4 development phases with strict validation gates.",
+      "speakerNote": "Stress that each phase starts only after its gate is met.",
+      "phases": [
+        { "phase": "Phase 1: Prototype (Weeks 1-6)", "focus": "14 locality bins, Dijkstra engine, basic dashboard", "gate": "Beats naive fixed route by >20% in simulation." },
+        { "phase": "Phase 2: Pilot Core (Weeks 7-16)", "focus": "Sensors in pilot ward, forecasting, multi-truck planner, lane-aware routing, worker PWA", "gate": "Km per tonne down and forecast error <10 points." },
+        { "phase": "Phase 3: Trust Layer (Weeks 17-26)", "focus": "Landfill balancing, photo-verified complaints, dumping heatmap, segregation labels", "gate": "80% of complaints closed with verified AI proof." },
+        { "phase": "Phase 4: Scale (Weeks 27-40)", "focus": "City-wide rollout across 12 MCD zones, public scorecard, hardening", "gate": "MCD wide operational deployment." }
+      ]
+    },
+    {
+      "slideNumber": 15,
+      "title": "Team & Execution",
+      "subtitle": "CodeGoblins — Multi-disciplinary engineering team.",
+      "speakerNote": "Judges back teams. Mention one real thing each member has built that relates to this problem.",
+      "members": [
+        { "name": "Akshat Kumar", "role": "Backend & Routing Lead", "focus": "Dijkstra algorithm, graph pathfinding, REST microservices" },
+        { "name": "Akshat Vats", "role": "ML Engineer", "focus": "Time-series forecasting, MobileNet waste classification" },
+        { "name": "Akshay Yadav", "role": "Frontend & Mobile Lead", "focus": "GIS map visualizations, PWA offline workflows, Tailwind UI" }
+      ]
+    },
+    {
+      "slideNumber": 16,
+      "title": "The Ask",
+      "subtitle": "We are asking for a pilot ward, not a city-wide contract.",
+      "speakerNote": "Make the ask specific and small enough that saying yes is easy.",
+      "bullets": [
+        "One pilot MCD ward (e.g. Ward 112 / Connaught Place) and its sanitation staff for a 90-day pilot.",
+        "Access to current truck routes, bin locations, and grievance logs for that ward.",
+        "A designated contact officer at MCD for weekly operational review.",
+        "Incubation grant / mentor support for LoRaWAN sensor hardware prototyping."
+      ]
+    },
+    {
+      "slideNumber": 17,
+      "title": "Closing Vision",
+      "subtitle": "Delhi doesn't need more trucks. It needs smarter trips and proof that the work is done.",
+      "speakerNote": "End on the one-line vision, then stop and take questions.",
+      "bullets": [
+        "Smarter routes. Cleaner streets. A healthier Delhi.",
+        "Contact: CodeGoblins • akshat@swachhroute.delhi.gov.in • +91 98112 34567",
+        "Interactive prototype available at http://localhost:5173"
+      ]
+    }
+  ],
+  "judgeQA": [
+    {
+      "question": "Is Dijkstra new?",
+      "answer": "No. We use Dijkstra as the proven, fast routing core and build prediction, multi-truck planning, lane-width constraints, landfill balancing, and verified proof around it."
+    },
+    {
+      "question": "Why not use Google Maps routing?",
+      "answer": "Our needs go beyond a single point-to-point route: we solve multi-bin, multi-truck combinatorial vehicle routing with weight capacities, narrow lane vehicle restrictions, and landfill queue balancing."
+    },
+    {
+      "question": "What if sensors fail or are stolen?",
+      "answer": "The system falls back to historical time-series regression estimates and flags missing sensor telemetry for inspection. The pilot begins with tamper-resistant ultrasonic pods."
+    },
+    {
+      "question": "How will sanitation workers use it?",
+      "answer": "We provide a simplified bilingual Hindi/English PWA with offline caching, turn-by-turn guidance, automated WhatsApp alert dispatch, and IVR voice call integration."
+    },
+    {
+      "question": "What about citizen privacy with grievance photos?",
+      "answer": "Faces and vehicle license plates are automatically blurred before storage. Data retention is strictly bounded and aggregated in compliance with Indian DPDP Act."
+    }
+  ]
+}
