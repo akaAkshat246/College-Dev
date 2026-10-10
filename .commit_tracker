@@ -1,2 +1,2 @@
-Commit #124: feat(algorithms): integrate binary min-heap into Dijkstra pathfinding relaxation
-Timestamp: 2026-09-22T02:56:14.586Z
+Commit #125: feat(algorithms): initialize distance and travel time arrays for all vertices
+Timestamp: 2026-09-22T03:56:14.915Z
