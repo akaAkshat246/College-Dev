@@ -48,7 +48,7 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'ONLINE',
     system: 'SwachhRoute Delhi Municipal OS',
-    team: 'CodeGoblins (Akshat Kumar, Akshat Vats, Akshay Yadav)',
+    division: 'Municipal Corporation of Delhi (MCD) AI & Automated Operations',
     version: '2.0.0',
     jurisdiction: 'National Capital Territory of Delhi (MCD)',
     activeBins: db.getBins().length,
@@ -286,10 +286,10 @@ app.get('/api/wards', (req, res) => {
 });
 
 // ==========================================
-// 9. PITCH DECK PRESENTATION DATA
+// 9. EXECUTIVE BRIEFING & SPECIFICATION DATA
 // ==========================================
-app.get('/api/pitch-deck', (req, res) => {
-  res.json(db.getPitchDeck() || { error: 'Pitch deck data unavailable' });
+app.get(['/api/pitch-deck', '/api/executive-briefing'], (req, res) => {
+  res.json(db.getPitchDeck() || { error: 'Platform specification data unavailable' });
 });
 
 // ==========================================

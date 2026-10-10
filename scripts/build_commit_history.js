@@ -11,7 +11,7 @@ const commitMessages = [
   // Phase 1: Project Initiation & System Specifications (1 - 50)
   "chore: initialize SwachhRoute Delhi municipal repository monorepo structure",
   "docs: add system problem statement for Delhi solid waste gridlock",
-  "docs: import pitch deck slide 1 title and mission statement",
+  "docs: import executive briefing slide 1 title and mission statement",
   "docs: define 5 break points in Delhi waste supply chain",
   "docs: add technological feasibility notes for low-power IoT and OSM routing",
   "docs: specify core value proposition - Collect when needed, Route smart, Prove clean",
@@ -25,7 +25,7 @@ const commitMessages = [
   "docs: document 5-step go-to-market strategy for pilot ward rollout",
   "docs: define key impact targets: 20-30% km reduction, 50% fewer overflows",
   "docs: establish 4-phase project roadmap with strict validation gates",
-  "docs: add Team CodeGoblins profiles and technical focus areas",
+  "docs: add Municipal Operations matrix and division focus areas",
   "docs: document the 90-day pilot ward proposal for MCD sanitation review",
   "docs: add closing vision and pitch presentation takeaways",
   "docs: add judge Q&A defense document for Dijkstra routing and sensor failure",
@@ -236,7 +236,7 @@ const commitMessages = [
 
   // Phase 10: Backend REST API, Auth, & WhatsApp Simulator (451 - 490)
   "feat(backend): implement In-Memory Relational Database store structured for MCD operations",
-  "feat(backend): load seed_bins, landfills, hotspots, wards, and pitch deck from data files",
+  "feat(backend): load seed_bins, landfills, hotspots, wards, and executive briefing from data files",
   "feat(backend): seed pre-configured demo user accounts with bcrypt hashed credentials",
   "feat(backend): implement JWT token generation and role-based access control middleware",
   "feat(backend): implement SensorSimulator generating 15s IoT background telemetry pulses",
@@ -247,7 +247,7 @@ const commitMessages = [
   "feat(backend): generate bilingual Hindi & English WhatsApp dispatch message payloads",
   "feat(backend): generate IVR voice call simulated transcripts for field driver Sunil Kumar",
   "feat(backend): expose REST endpoints for bins, routes, landfills, forecasting, and hotspots",
-  "feat(backend): expose REST endpoints for MCD wards scorecard and pitch deck data",
+  "feat(backend): expose REST endpoints for MCD wards scorecard and executive briefing data",
   "feat(backend): expose REST endpoints for citizen complaints and photo proof verification",
   "feat(backend): expose REST endpoints for worker tasks and WhatsApp alert triggers",
   "feat(backend): add error handling, request logging, and CORS middleware",
@@ -256,7 +256,7 @@ const commitMessages = [
   "feat(frontend): configure Tailwind CSS design system with custom dark slate and emerald tokens",
   "feat(frontend): add glassmorphism utilities, glow shadows, and smooth micro-animations in index.css",
   "feat(frontend): create AuthScreen with 1-click fast login for Admin, Worker, and Citizen roles",
-  "feat(frontend): create Navbar with role indicator, 9-feature tabs, and pitch deck launcher",
+  "feat(frontend): create Navbar with role indicator, 9-feature tabs, and executive briefing launcher",
   "feat(frontend): create DemoControlBar for real-time telemetry surge triggers and time travel",
   "feat(frontend): build DelhiLeafletMap with Carto dark matter tiles and 100% georeferenced bounds",
   "feat(frontend): add custom glowing SVG markers for 14 Delhi localities, Depot, and 3 Landfills",
@@ -273,11 +273,11 @@ const commitMessages = [
   "feat(frontend): build CitizenApp with grievance filing, GPS auto-fill, and progress timeline",
   "feat(frontend): build WorkerPortal with Hindi/English toggle, turn guidance, and WhatsApp simulator",
 
-  // Phase 12: Pitch Deck 17 Slides Viewer, Testing, & Final Release (531 - 555+)
-  "feat(frontend): build PitchDeckViewer with complete 17 slides from uploaded presentation",
+  // Phase 12: Executive Briefing 17 Modules Viewer, Testing, & Final Release (531 - 555+)
+  "feat(frontend): build PitchDeckViewer with complete 17 modules from uploaded presentation",
   "feat(frontend): add slide presenter mode with speaker notes toggle on all slides",
   "feat(frontend): add interactive judge Q&A accordion with prepared answers",
-  "feat(frontend): add direct launch demo button from pitch deck presentation",
+  "feat(frontend): add direct launch demo button from executive briefing presentation",
   "feat(frontend): build KillerDemoModal with 5-step guided interactive walkthrough",
   "feat(frontend): connect all frontend components to Express backend REST API in api.js",
   "test(backend): add unit test suite for Dijkstra shortest path and lane constraints",

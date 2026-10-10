@@ -59,7 +59,7 @@ class CleanlinessVerifyRequest(BaseModel):
 def root():
     return {
         "service": "SwachhRoute Delhi AI Vision & Telematics Engine",
-        "team": "CodeGoblins (Akshat Kumar, Akshat Vats, Akshay Yadav)",
+        "division": "Municipal Corporation of Delhi (MCD) AI Vision Division",
         "version": "2.0.0",
         "status": "OPERATIONAL",
         "models_loaded": [

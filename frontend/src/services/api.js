@@ -130,10 +130,10 @@ export const api = {
     }
   },
 
-  // --- PITCH DECK PRESENTATION ---
+  // --- EXECUTIVE BRIEFING & SPECIFICATIONS ---
   async getPitchDeck() {
     try {
-      const res = await fetch(`${API_BASE}/pitch-deck`);
+      const res = await fetch(`${API_BASE}/executive-briefing`).catch(() => fetch(`${API_BASE}/pitch-deck`));
       return await res.json();
     } catch (err) {
       console.error(err);

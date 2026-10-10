@@ -3,11 +3,11 @@
     "project": "SwachhRoute Delhi",
     "tagline": "Collect when needed. Route smart. Prove it's clean.",
     "subtitle": "An AI-assisted waste collection platform for Delhi, built on Dijkstra routing.",
-    "team": "CodeGoblins",
+    "team": "MCD Automated Operations Division",
     "members": [
-      { "name": "Akshat Kumar", "role": "Backend and Routing Lead", "focus": "Dijkstra, VRP Multi-Truck Planner, REST APIs" },
-      { "name": "Akshat Vats", "role": "ML Engineer", "focus": "Overflow Forecasting, Vision Material Classification" },
-      { "name": "Akshay Yadav", "role": "Frontend & Mobile Lead", "focus": "MCD Command Center, PWA Worker App, Interactive Map" }
+      { "name": "Algorithmic Routing Division", "role": "Backend & Fleet Core", "focus": "Dijkstra, VRP Multi-Truck Planner, REST APIs" },
+      { "name": "Computer Vision & Telemetry", "role": "ML & Analytics Core", "focus": "Overflow Forecasting, Vision Material Classification" },
+      { "name": "Field Operations & GIS", "role": "Command & PWA Core", "focus": "MCD Command Center, PWA Worker App, Interactive Map" }
     ],
     "date": "October 2026",
     "version": "2.0.0"
@@ -197,13 +197,13 @@
     },
     {
       "slideNumber": 15,
-      "title": "Team & Execution",
-      "subtitle": "CodeGoblins — Multi-disciplinary engineering team.",
-      "speakerNote": "Judges back teams. Mention one real thing each member has built that relates to this problem.",
+      "title": "Municipal Governance & Operations Matrix",
+      "subtitle": "Institutional Division of Operational Responsibilities across MCD.",
+      "speakerNote": "Highlight how the municipal governance structure coordinates between central command, ML analytics, and field teams.",
       "members": [
-        { "name": "Akshat Kumar", "role": "Backend & Routing Lead", "focus": "Dijkstra algorithm, graph pathfinding, REST microservices" },
-        { "name": "Akshat Vats", "role": "ML Engineer", "focus": "Time-series forecasting, MobileNet waste classification" },
-        { "name": "Akshay Yadav", "role": "Frontend & Mobile Lead", "focus": "GIS map visualizations, PWA offline workflows, Tailwind UI" }
+        { "name": "Central Command & Fleet Dispatch", "role": "Command & Optimization", "focus": "Dijkstra algorithm, graph pathfinding, multi-truck VRP dispatch" },
+        { "name": "Computer Vision & Telematics Lab", "role": "Automated Quality Assurance", "focus": "Time-series forecasting, MobileNet waste classification, photo verification" },
+        { "name": "Zonal Field & Sanitation Division", "role": "Municipal Execution", "focus": "GIS map visualizations, PWA offline workflows, citizen grievance resolution" }
       ]
     },
     {
@@ -225,7 +225,7 @@
       "speakerNote": "End on the one-line vision, then stop and take questions.",
       "bullets": [
         "Smarter routes. Cleaner streets. A healthier Delhi.",
-        "Contact: CodeGoblins • akshat@swachhroute.delhi.gov.in • +91 98112 34567",
+        "Contact: Municipal Corporation of Delhi • contact@swachhroute.delhi.gov.in • 1800-11-0062",
         "Interactive prototype available at http://localhost:5173"
       ]
     }

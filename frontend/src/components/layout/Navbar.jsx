@@ -77,32 +77,32 @@ export default function Navbar({
                 className="flex items-center gap-3.5 cursor-pointer" 
                 onClick={() => handleSelectTab(role === 'ADMIN' ? 'dashboard' : role === 'WORKER' ? 'worker-home' : 'citizen-home')}
               >
-                <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-500 p-0.5 shadow-glow-sm flex items-center justify-center">
-                  <div className="w-full h-full bg-dark-950 rounded-[14px] flex items-center justify-center">
-                    <Trash2 className="w-5 h-5 text-emerald-400" />
+                <div className="w-11 h-11 rounded-2xl bg-olive-600 p-0.5 shadow-md flex items-center justify-center border border-cream/20">
+                  <div className="w-full h-full bg-forest-900 rounded-[14px] flex items-center justify-center">
+                    <Trash2 className="w-5 h-5 text-ochre-400" />
                   </div>
                 </div>
 
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xl font-heading font-black tracking-tight text-white">
-                      SwachhRoute <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Delhi</span>
+                    <span className="text-xl font-heading font-black tracking-tight text-cream">
+                      SwachhRoute <span className="bg-gradient-to-r from-ochre-400 to-terracotta-400 bg-clip-text text-transparent">Delhi</span>
                     </span>
-                    <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                    <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full uppercase bg-olive-500/25 text-cream border border-olive-500/40">
                       MCD OS
                     </span>
                   </div>
-                  <span className="text-[10px] font-mono text-slate-400 block -mt-0.5">
-                    by CodeGoblins • NCT of Delhi
+                  <span className="text-[10px] font-mono text-cream/60 block -mt-0.5">
+                    NCT of Delhi • Municipal Sanitation AI
                   </span>
                 </div>
               </div>
 
-              {/* Active View Badge (Replaces cluttered top row) */}
-              <div className="hidden md:flex items-center gap-2 pl-4 border-l border-white/10">
-                <span className="text-[10px] font-mono uppercase text-slate-500">Active View:</span>
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-dark-900 border border-white/10 text-xs font-mono text-emerald-300 font-bold shadow-inner">
-                  <currentItem.icon className="w-3.5 h-3.5 text-emerald-400" />
+              {/* Active View Badge */}
+              <div className="hidden md:flex items-center gap-2 pl-4 border-l border-cream/10">
+                <span className="text-[10px] font-mono uppercase text-ochre-400/70">Active View:</span>
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl clay-pill text-xs font-mono text-cream font-bold">
+                  <currentItem.icon className="w-3.5 h-3.5 text-ochre-400" />
                   <span>{currentItem.label}</span>
                 </div>
               </div>
@@ -113,48 +113,48 @@ export default function Navbar({
               
               {/* Critical Bins Pill */}
               {criticalCount > 0 && (
-                <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 font-mono text-xs">
-                  <span className="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
+                <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-terracotta-500/20 border border-terracotta-500/40 text-cream font-mono text-xs">
+                  <span className="w-2 h-2 rounded-full bg-terracotta-400 animate-ping"></span>
                   <span>{criticalCount} Critical Bins</span>
                 </div>
               )}
 
-              {/* Pitch Deck / Landing Page Button */}
+              {/* Executive Briefing Button */}
               <button
                 onClick={onOpenPitchDeck}
-                className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 text-purple-300 border border-purple-500/30 font-heading font-bold text-xs shadow-sm transition-all"
-                title="View 17-Slide Pitch Deck"
+                className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-forest-800 hover:bg-forest-700 text-cream border border-cream/15 font-heading font-bold text-xs shadow-sm transition-all"
+                title="View Executive Briefing (17 Modules)"
               >
-                <FileText className="w-3.5 h-3.5 text-purple-400" />
-                <span>Pitch Deck (17 Slides)</span>
+                <FileText className="w-3.5 h-3.5 text-ochre-400" />
+                <span>Executive Briefing</span>
               </button>
 
               {/* Guided Interactive Demo Button */}
               <button
                 onClick={onStartKillerDemo}
-                className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 text-dark-950 font-heading font-black text-xs shadow-glow-sm transition-all hover:brightness-110"
+                className="hidden md:flex items-center gap-1.5 px-3.5 py-2 clay-btn-primary text-cream font-heading font-black text-xs transition-all cursor-pointer"
               >
-                <Play className="w-3.5 h-3.5 fill-dark-950" />
+                <Play className="w-3.5 h-3.5 fill-cream" />
                 <span>Interactive Demo</span>
               </button>
 
               {/* Current Role Badge */}
               <div className={`hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border text-xs font-mono font-bold ${
-                role === 'ADMIN' ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30' :
-                role === 'WORKER' ? 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30' :
-                'bg-amber-500/10 text-amber-300 border-amber-500/30'
+                role === 'ADMIN' ? 'bg-olive-600/30 text-cream border-olive-500/40' :
+                role === 'WORKER' ? 'bg-terracotta-500/20 text-cream border-terracotta-500/40' :
+                'bg-ochre-400/20 text-cream border-ochre-400/40'
               }`}>
-                <User className="w-3.5 h-3.5" />
+                <User className="w-3.5 h-3.5 text-ochre-400" />
                 <span>{role}</span>
               </div>
 
               {/* HAMBURGER MENU BUTTON */}
               <button
                 onClick={() => setIsDrawerOpen(true)}
-                className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-dark-900 hover:bg-dark-850 border border-white/15 hover:border-emerald-500/40 text-slate-200 hover:text-white transition-all shadow-sm group"
+                className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-forest-800 hover:bg-forest-700 border border-cream/20 text-cream transition-all shadow-sm group cursor-pointer"
                 aria-label="Open Navigation Menu"
               >
-                <Menu className="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <Menu className="w-5 h-5 text-ochre-400 group-hover:scale-110 transition-transform" />
                 <span className="text-xs font-mono font-bold">Menu</span>
               </button>
 
@@ -321,21 +321,21 @@ export default function Navbar({
                 </div>
 
                 {/* 4. Quick Actions */}
-                <div className="space-y-2 pt-2 border-t border-white/10">
+                <div className="space-y-2 pt-2 border-t border-cream/10">
                   <button
                     onClick={() => { setIsDrawerOpen(false); onStartKillerDemo(); }}
-                    className="w-full flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-dark-950 font-heading font-black text-xs shadow-glow-sm hover:brightness-110 transition-all"
+                    className="w-full flex items-center gap-3 p-3 clay-btn-primary text-cream font-heading font-black text-xs transition-all cursor-pointer"
                   >
-                    <Play className="w-4 h-4 fill-dark-950" />
+                    <Play className="w-4 h-4 fill-cream" />
                     <span>Run Interactive Scenario Demo</span>
                   </button>
 
                   <button
                     onClick={() => { setIsDrawerOpen(false); onOpenPitchDeck(); }}
-                    className="w-full flex items-center gap-3 p-3 rounded-xl bg-dark-900 hover:bg-dark-850 border border-purple-500/30 text-purple-300 font-heading font-bold text-xs transition-all"
+                    className="w-full flex items-center gap-3 p-3 rounded-xl bg-forest-800 hover:bg-forest-750 border border-cream/15 text-cream font-heading font-bold text-xs transition-all cursor-pointer"
                   >
-                    <FileText className="w-4 h-4 text-purple-400" />
-                    <span>View 17-Slide Pitch Deck</span>
+                    <FileText className="w-4 h-4 text-ochre-400" />
+                    <span>View Executive Briefing (17 Modules)</span>
                   </button>
                 </div>
 

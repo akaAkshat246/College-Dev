@@ -1,8 +1,7 @@
 # SwachhRoute Delhi — AI-Assisted Municipal Waste Operating System
 
 > **"Collect when needed. Route smart. Prove it's clean."**  
-> *A production-grade, venture-backed smart-city waste intelligence operating system for the National Capital Territory of Delhi.*  
-> **Team CodeGoblins**: Akshat Kumar • Akshat Vats • Akshay Yadav  
+> *A production-grade, smart-city waste intelligence operating system for the National Capital Territory of Delhi.*  
 > **Built for**: Municipal Corporation of Delhi (MCD) & Smart Cities Mission
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
@@ -133,13 +132,13 @@ node backend/tests/fill_forecaster.test.js
 
 ---
 
-## 👥 Team CodeGoblins
+## 🏛️ Municipal Architecture & Operations Matrix
 
-- **Akshat Kumar** — *Backend & Routing Lead* (Dijkstra algorithm, VRP Multi-Truck planner, Landfill load balancing, Express REST APIs)
-- **Akshat Vats** — *ML & Vision Engineer* (Time-series overflow regression, MobileNet material classification, Cleanliness verification)
-- **Akshay Yadav** — *Frontend & Mobile Lead* (Leaflet GIS mapping, PWA worker app, Bilingual UI, WhatsApp/IVR simulator)
+- **Central Command & Fleet Dispatch** — Dijkstra graph pathfinding, VRP Multi-Truck planner, Landfill load balancing, Express REST APIs
+- **Computer Vision & Automated Telematics** — Time-series overflow regression, MobileNet material classification, Cleanliness verification
+- **Zonal Field & Municipal Operations** — Leaflet GIS mapping, PWA worker app, Bilingual UI, WhatsApp/IVR simulator
 
 ---
 
 ## 📄 License
-MIT © 2026 CodeGoblins Team. Built for the National Capital Territory of Delhi Municipal Corporation (MCD).
+MIT © 2026 Municipal Corporation of Delhi (MCD). Built for the National Capital Territory of Delhi.

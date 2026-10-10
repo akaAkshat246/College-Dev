@@ -50,18 +50,18 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
             An AI-assisted waste collection platform for the National Capital Territory of Delhi, built on Dijkstra graph routing, multi-truck planning, landfill balancing, and photo-verified clean proof.
           </p>
 
-          <div className="pt-4 border-t border-white/10 w-full max-w-lg flex items-center justify-around text-xs font-mono text-slate-400">
+          <div className="pt-4 border-t border-cream/15 w-full max-w-lg flex items-center justify-around text-xs font-mono text-cream/70">
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Team</span>
-              <span className="text-emerald-400 font-bold">CodeGoblins</span>
+              <span className="text-ochre-400/80 block text-[10px] uppercase">Authority</span>
+              <span className="text-cream font-bold">MCD Operations Core</span>
             </div>
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Members</span>
-              <span className="text-white">Akshat Kumar • Akshat Vats • Akshay Yadav</span>
+              <span className="text-ochre-400/80 block text-[10px] uppercase">Jurisdiction</span>
+              <span className="text-cream">NCT of Delhi (12 Zones)</span>
             </div>
             <div>
-              <span className="text-slate-500 block text-[10px] uppercase">Date</span>
-              <span className="text-white">October 2026</span>
+              <span className="text-ochre-400/80 block text-[10px] uppercase">Specification</span>
+              <span className="text-cream">v2.4 Production</span>
             </div>
           </div>
         </div>
@@ -466,40 +466,40 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
     },
     {
       number: 15,
-      title: "Team CodeGoblins",
-      tagline: "Complementary engineering & systems team.",
-      category: "Team",
+      title: "Municipal Operations & Governance Architecture",
+      tagline: "Tri-pillar operational structure coordinating central optimization and zonal execution.",
+      category: "Governance",
       content: (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center py-2 text-xs">
-          <div className="p-4 rounded-xl bg-dark-900 border border-white/10">
-            <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2">
-              AK
+          <div className="p-4 rounded-xl clay-card border border-cream/15">
+            <div className="w-12 h-12 rounded-full bg-olive-600/30 text-ochre-400 font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2 border border-olive-500/40">
+              CC
             </div>
-            <h4 className="text-sm font-bold text-white">Akshat Kumar</h4>
-            <span className="text-emerald-400 font-mono text-[11px] block">Backend & Routing Lead</span>
-            <p className="text-slate-400 text-[11px] mt-1.5">Dijkstra, VRP multi-truck solver, REST APIs, Landfill balancer.</p>
+            <h4 className="text-sm font-bold text-cream">Central Command & Dispatch</h4>
+            <span className="text-ochre-400 font-mono text-[11px] block mt-0.5">Fleet Routing Core</span>
+            <p className="text-cream/70 text-[11px] mt-1.5">Dijkstra graph optimization, multi-truck VRP solver, dynamic landfill weighbridge queue balancer.</p>
           </div>
 
-          <div className="p-4 rounded-xl bg-dark-900 border border-white/10">
-            <div className="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2">
-              AV
+          <div className="p-4 rounded-xl clay-card border border-cream/15">
+            <div className="w-12 h-12 rounded-full bg-terracotta-500/20 text-terracotta-400 font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2 border border-terracotta-500/40">
+              ML
             </div>
-            <h4 className="text-sm font-bold text-white">Akshat Vats</h4>
-            <span className="text-cyan-400 font-mono text-[11px] block">ML & Vision Engineer</span>
-            <p className="text-slate-400 text-[11px] mt-1.5">Time-series forecasting, MobileNet waste classification, AI photo proof.</p>
+            <h4 className="text-sm font-bold text-cream">Computer Vision & Telemetry</h4>
+            <span className="text-terracotta-400 font-mono text-[11px] block mt-0.5">Automated Intelligence</span>
+            <p className="text-cream/70 text-[11px] mt-1.5">Time-series fill rate regression, edge MobileNet material triage, automated cleanliness verification.</p>
           </div>
 
-          <div className="p-4 rounded-xl bg-dark-900 border border-white/10">
-            <div className="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2">
-              AY
+          <div className="p-4 rounded-xl clay-card border border-cream/15">
+            <div className="w-12 h-12 rounded-full bg-ochre-400/20 text-cream font-bold mx-auto flex items-center justify-center text-sm font-heading mb-2 border border-ochre-400/40">
+              ZD
             </div>
-            <h4 className="text-sm font-bold text-white">Akshay Yadav</h4>
-            <span className="text-amber-400 font-mono text-[11px] block">Frontend & Mobile Lead</span>
-            <p className="text-slate-400 text-[11px] mt-1.5">Leaflet GIS mapping, PWA worker app, Hindi voice/WhatsApp simulator.</p>
+            <h4 className="text-sm font-bold text-cream">Zonal Field & Citizen Gateway</h4>
+            <span className="text-ochre-300 font-mono text-[11px] block mt-0.5">Ground Telemetry</span>
+            <p className="text-cream/70 text-[11px] mt-1.5">Georeferenced field tablets, turn navigation, bilingual voice/SMS dispatch, offline sync.</p>
           </div>
         </div>
       ),
-      speakerNote: "Judges back teams. Mention one real thing each member has built that relates to this problem."
+      speakerNote: "Stress the division of institutional responsibilities: algorithmic route computation, automated AI verification, and field crew telemetry."
     },
     {
       number: 16,
@@ -548,19 +548,19 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
       category: "Conclusion",
       content: (
         <div className="text-center py-6 space-y-4">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center shadow-glow-sm">
-            <Trees className="w-7 h-7" />
+          <div className="w-14 h-14 rounded-2xl bg-olive-600/30 text-cream mx-auto flex items-center justify-center border border-olive-500/40 shadow-md">
+            <Trees className="w-7 h-7 text-ochre-400" />
           </div>
-          <h2 className="text-2xl font-heading font-black text-white">
+          <h2 className="text-2xl font-heading font-black text-cream">
             Smarter Routes. Cleaner Streets. A Healthier Delhi.
           </h2>
-          <p className="text-xs text-slate-400 font-mono">
-            Contact: CodeGoblins • akshat@swachhroute.delhi.gov.in • +91 98112 34567
+          <p className="text-xs text-cream/70 font-mono">
+            Municipal Corporation of Delhi • contact@swachhroute.delhi.gov.in • Toll-Free: 1800-11-0062
           </p>
           <div className="pt-4">
             <button
               onClick={() => { onClose(); onLaunchDemo(); }}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-400 text-dark-950 font-heading font-black text-sm shadow-glow-sm"
+              className="px-6 py-3 clay-btn-primary text-cream font-heading font-black text-sm cursor-pointer"
             >
               Open Live System Prototype
             </button>
@@ -593,18 +593,18 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
   const slide = slides[currentSlide];
 
   return (
-    <div className="fixed inset-0 z-50 bg-dark-950/90 backdrop-blur-xl flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-dark-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+    <div className="fixed inset-0 z-50 bg-forest-950/90 backdrop-blur-xl flex items-center justify-center p-4">
+      <div className="w-full max-w-4xl clay-card overflow-hidden flex flex-col max-h-[92vh] border border-cream/15">
         
         {/* Header Bar */}
-        <div className="px-6 py-4 bg-dark-950 border-b border-white/10 flex items-center justify-between">
+        <div className="px-6 py-4 bg-forest-900 border-b border-cream/10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-sm font-heading font-black text-white">
-              SwachhRoute Delhi Pitch Deck
+            <span className="w-2.5 h-2.5 rounded-full bg-ochre-400 animate-pulse"></span>
+            <span className="text-sm font-heading font-black text-cream">
+              SwachhRoute Delhi • System Architecture & Executive Briefing
             </span>
-            <span className="text-xs font-mono text-slate-400">
-              Slide {slide.number} of {slides.length} • {slide.category}
+            <span className="text-xs font-mono text-cream/60">
+              Module {slide.number} of {slides.length} • {slide.category}
             </span>
           </div>
 
@@ -612,14 +612,14 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
             <button
               onClick={() => setShowSpeakerNotes(!showSpeakerNotes)}
               className={`px-2.5 py-1 rounded-lg text-xs font-mono border transition-colors ${
-                showSpeakerNotes ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-dark-900 text-slate-400 border-white/10'
+                showSpeakerNotes ? 'bg-olive-600/30 text-cream border-olive-500/40' : 'bg-forest-800 text-cream/70 border-cream/10'
               }`}
             >
               Notes {showSpeakerNotes ? 'ON' : 'OFF'}
             </button>
             <button
               onClick={onClose}
-              className="w-8 h-8 rounded-lg bg-dark-900 border border-white/10 text-slate-400 hover:text-white flex items-center justify-center"
+              className="w-8 h-8 rounded-lg bg-forest-800 border border-cream/15 text-cream/80 hover:text-cream flex items-center justify-center cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
@@ -680,24 +680,24 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
         </div>
 
         {/* Navigation Controls Footer */}
-        <div className="px-6 py-4 bg-dark-950 border-t border-white/10 flex items-center justify-between">
+        <div className="px-6 py-4 bg-forest-900 border-t border-cream/10 flex items-center justify-between">
           <button
             onClick={() => setCurrentSlide(prev => Math.max(0, prev - 1))}
             disabled={currentSlide === 0}
-            className="px-4 py-2 rounded-xl bg-dark-900 border border-white/10 text-xs font-bold text-slate-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5"
+            className="px-4 py-2 rounded-xl bg-forest-800 border border-cream/15 text-xs font-bold text-cream hover:bg-forest-750 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5 cursor-pointer"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="w-4 h-4 text-ochre-400" />
             <span>Previous</span>
           </button>
 
           {/* Dots Indicator */}
-          <div className="hidden sm:flex items-center gap-1">
+          <div className="hidden sm:flex items-center gap-1.5">
             {slides.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentSlide(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  currentSlide === idx ? 'w-6 bg-emerald-400 shadow-glow-sm' : 'bg-slate-700 hover:bg-slate-500'
+                className={`h-2.5 rounded-full transition-all cursor-pointer ${
+                  currentSlide === idx ? 'w-6 bg-ochre-400 shadow-sm' : 'w-2.5 bg-forest-700 hover:bg-forest-600'
                 }`}
               />
             ))}
@@ -706,9 +706,9 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
           <button
             onClick={() => setCurrentSlide(prev => Math.min(slides.length - 1, prev + 1))}
             disabled={currentSlide === slides.length - 1}
-            className="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 text-dark-950 text-xs font-bold hover:brightness-110 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5 shadow-glow-sm"
+            className="px-4 py-2 clay-btn-primary text-cream text-xs font-bold disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-1.5 cursor-pointer"
           >
-            <span>Next Slide</span>
+            <span>Next Module</span>
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>

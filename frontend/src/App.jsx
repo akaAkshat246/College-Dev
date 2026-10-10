@@ -278,12 +278,12 @@ function MainApp() {
       <footer className="border-t border-white/10 bg-dark-900/80 backdrop-blur-xl py-6 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-heading font-bold text-white text-sm">SwachhRoute Delhi</span>
-            <span>• Team CodeGoblins (Akshat Kumar, Akshat Vats, Akshay Yadav) • MCD Municipal OS</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-olive-400 animate-pulse"></span>
+            <span className="font-heading font-bold text-cream text-sm">SwachhRoute Delhi</span>
+            <span className="text-cream/80">• Municipal Corporation of Delhi • Automated Operations Core</span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] text-slate-500">
+          <div className="flex items-center gap-4 text-[11px] text-ochre-400/80">
             <span>FastAPI: 8000</span>
             <span>•</span>
             <span>Express: 5000</span>
@@ -293,7 +293,7 @@ function MainApp() {
         </div>
       </footer>
 
-      {/* 5. Complete 17-Slide Interactive Pitch Deck Presentation */}
+      {/* 5. Complete 17-Module System Architecture & Executive Briefing */}
       <PitchDeckViewer
         isOpen={isPitchDeckOpen}
         onClose={() => setIsPitchDeckOpen(false)}

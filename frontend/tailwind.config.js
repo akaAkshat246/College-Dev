@@ -8,33 +8,59 @@ export default {
   theme: {
     extend: {
       colors: {
+        olive: {
+          DEFAULT: '#606C38',
+          50: '#f7f8f2',
+          100: '#eef1e3',
+          200: '#dde3c7',
+          300: '#c5d0a2',
+          400: '#a6b777',
+          500: '#849851',
+          600: '#606C38',
+          700: '#4a542b',
+          800: '#383f21',
+          900: '#2d331a'
+        },
+        forest: {
+          DEFAULT: '#283618',
+          950: '#0c1207',
+          900: '#141c0c',
+          850: '#1b2610',
+          800: '#283618',
+          700: '#384b22',
+          600: '#4f6930'
+        },
+        cream: {
+          DEFAULT: '#FEFAE0',
+          50: '#ffffff',
+          100: '#FEFAE0',
+          200: '#fbf5c8',
+          300: '#f8eaab',
+          400: '#f3d97b'
+        },
+        ochre: {
+          DEFAULT: '#DDA15E',
+          200: '#f1d3af',
+          300: '#e7ba86',
+          400: '#DDA15E',
+          500: '#cb8b44',
+          600: '#b1722e'
+        },
+        terracotta: {
+          DEFAULT: '#BC6C25',
+          300: '#da8a43',
+          400: '#cc7d33',
+          500: '#BC6C25',
+          600: '#9e5417',
+          700: '#7e3f0e'
+        },
         dark: {
-          950: '#04070d',
-          900: '#080e1a',
-          850: '#0d1527',
-          800: '#111c34',
-          700: '#19284a',
-          600: '#233867'
-        },
-        emerald: {
-          450: '#00f59b',
-          500: '#10b981',
-          550: '#059669',
-        },
-        cyan: {
-          450: '#00e1ff',
-        },
-        brand: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
+          950: '#0c1207',
+          900: '#141c0c',
+          850: '#1b2610',
+          800: '#283618',
+          700: '#384b22',
+          600: '#4f6930'
         }
       },
       fontFamily: {
@@ -43,36 +69,25 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace']
       },
       boxShadow: {
-        'glow-sm': '0 0 15px rgba(16, 185, 129, 0.25)',
-        'glow-md': '0 0 25px rgba(16, 185, 129, 0.35)',
-        'glow-cyan': '0 0 25px rgba(6, 182, 212, 0.35)',
-        'glow-amber': '0 0 25px rgba(245, 158, 11, 0.35)',
-        'glow-red': '0 0 25px rgba(239, 68, 68, 0.45)',
-        'glass-card': '0 8px 32px 0 rgba(0, 0, 0, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.08)',
-        'glass-inset': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.1)',
+        'clay-card': '0 14px 28px -4px rgba(7, 12, 4, 0.7), 0 6px 12px -2px rgba(7, 12, 4, 0.5), inset 0 1px 2px 0 rgba(254, 250, 224, 0.16), inset 0 -2px 4px 0 rgba(0, 0, 0, 0.4)',
+        'clay-card-hover': '0 20px 35px -6px rgba(7, 12, 4, 0.8), 0 8px 16px -3px rgba(7, 12, 4, 0.6), inset 0 1px 2px 0 rgba(254, 250, 224, 0.22), inset 0 -2px 4px 0 rgba(0, 0, 0, 0.45)',
+        'clay-btn': '0 6px 16px rgba(188, 108, 37, 0.35), 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(254, 250, 224, 0.35), inset 0 -2px 3px rgba(0, 0, 0, 0.35)',
+        'clay-btn-olive': '0 6px 16px rgba(96, 108, 56, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(254, 250, 224, 0.35), inset 0 -2px 3px rgba(0, 0, 0, 0.35)',
+        'neomorph-extruded': '8px 8px 18px rgba(5, 9, 3, 0.75), -5px -5px 14px rgba(96, 108, 56, 0.15)',
+        'neomorph-debossed': 'inset 3px 3px 6px rgba(0, 0, 0, 0.55), inset -2px -2px 5px rgba(254, 250, 224, 0.08)',
+        'clay-pill': '0 4px 10px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(254, 250, 224, 0.25), inset 0 -1px 2px rgba(0, 0, 0, 0.35)',
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'laser-scan': 'laserScan 2.5s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
-        'aurora': 'aurora 15s ease infinite alternate',
       },
       keyframes: {
-        laserScan: {
-          '0%, 100%': { transform: 'translateY(0%)', opacity: '0.8' },
-          '50%': { transform: 'translateY(100%)', opacity: '1' },
-        },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-6px)' },
-        },
-        aurora: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          '50%': { transform: 'translateY(-4px)' },
         }
       }
     },
   },
   plugins: [],
-}
+};
