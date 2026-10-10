@@ -1,2 +1,2 @@
-Commit #231: feat(frontend): add custom glowing SVG markers for 14 Delhi localities, Depot, and 3 Landfills
-Timestamp: 2026-09-26T13:56:50.759Z
+Commit #232: feat(frontend): implement animated truck movement along Dijkstra route waypoints
+Timestamp: 2026-09-26T14:56:51.076Z
