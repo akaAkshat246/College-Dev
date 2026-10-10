@@ -1,2 +1,2 @@
-Commit #204: feat(ai): build cleanliness_verifier.py for Feature F5 Before/After photo comparison
-Timestamp: 2026-09-25T10:56:41.717Z
+Commit #205: feat(ai): compute cleanliness score improvement delta % and residual rubbish score
+Timestamp: 2026-09-25T11:56:42.042Z
