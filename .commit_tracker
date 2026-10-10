@@ -1,2 +1,2 @@
-Commit #115: feat(algorithms): add narrow lane urgency boost for high-density pedestrian markets
-Timestamp: 2026-09-21T17:56:11.268Z
+Commit #116: feat(algorithms): clamp priority scores between 0 and 100
+Timestamp: 2026-09-21T18:56:11.658Z
