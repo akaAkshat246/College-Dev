@@ -1,2 +1,2 @@
-Commit #210: feat(backend): load seed_bins, landfills, hotspots, wards, and pitch deck from data files
-Timestamp: 2026-09-25T16:56:43.772Z
+Commit #211: feat(backend): seed pre-configured demo user accounts with bcrypt hashed credentials
+Timestamp: 2026-09-25T17:56:44.114Z
