@@ -1,2 +1,2 @@
-Commit #173: feat(algorithms): reset truck payload weight to 0 kg after landfill discharge stop
-Timestamp: 2026-09-24T03:56:30.965Z
+Commit #174: feat(algorithms): compute return route from final collection stop / landfill back to Central Depot
+Timestamp: 2026-09-24T04:56:31.288Z
