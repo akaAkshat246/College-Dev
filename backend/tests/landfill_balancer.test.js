@@ -20,10 +20,10 @@ export function runLandfillTests() {
 
   console.assert(decision !== null, 'Test 1 Failed: Decision should not be null');
   console.assert(decision.optimalLandfill !== undefined, 'Test 1 Failed: Optimal landfill must be defined');
-  console.log('✓ Test 1 Passed: Optimal Landfill selected:', decision.optimalLandfill.name);
+  console.log('[PASS] Test 1: Optimal Landfill selected:', decision.optimalLandfill.name);
   console.log('  Time saved vs naive nearest:', decision.timeSavedMinutesVsNearest, 'minutes');
 
-  console.log('🎉 ALL LANDFILL BALANCER TESTS PASSED!\n');
+  console.log('ALL LANDFILL BALANCER TESTS PASSED!\n');
 }
 
 runLandfillTests();

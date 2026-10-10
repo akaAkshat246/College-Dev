@@ -90,7 +90,7 @@ export class LaneAwareRouter {
     if (bin.laneWidth === 'NARROW' && vehicleType === 'HEAVY_COMPACTOR') {
       return {
         allowed: false,
-        warning: `⚠️ Width Violation: Heavy compactor cannot enter narrow street at ${bin.name}. Use E-Rickshaw Mini-Tipper.`
+        warning: `Width Violation: Heavy compactor cannot enter narrow street at ${bin.name}. Use E-Rickshaw Mini-Tipper.`
       };
     }
     return { allowed: true, warning: null };

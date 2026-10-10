@@ -14,7 +14,7 @@ export function runPriorityQueueTests() {
   const highest = pq.dequeue();
   console.assert(highest === 95, `Test 1 Failed: Expected 95, got ${highest}`);
   console.assert(pq.dequeue() === 85, 'Test 1 Failed: Expected 85 second');
-  console.log('✓ Test 1 Passed: Binary Max-Heap accurately extracts maximum priority elements in O(log N)');
+  console.log('[PASS] Test 1: Binary Max-Heap accurately extracts maximum priority elements in O(log N)');
 
   // Test 2: Multi-Factor Priority Calculation
   const criticalBin = {
@@ -28,9 +28,9 @@ export function runPriorityQueueTests() {
 
   const score = calculateBinPriorityScore(criticalBin, { festivalSurge: 1.65 });
   console.assert(score >= 80, `Test 2 Failed: Urgency score should be >= 80, got ${score}`);
-  console.log('✓ Test 2 Passed: Multi-factor MCD bin score evaluated:', score);
+  console.log('[PASS] Test 2: Multi-factor MCD bin score evaluated:', score);
 
-  console.log('🎉 ALL PRIORITY QUEUE TESTS PASSED!\n');
+  console.log('ALL PRIORITY QUEUE TESTS PASSED!\n');
 }
 
 runPriorityQueueTests();

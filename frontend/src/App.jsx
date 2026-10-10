@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import AuthScreen from './components/auth/AuthScreen';
+import LandingPage from './components/landing/LandingPage';
 import Navbar from './components/layout/Navbar';
 import DemoControlBar from './components/simulator/DemoControlBar';
 import OverviewView from './components/dashboard/OverviewView';
@@ -27,6 +28,7 @@ function MainApp() {
   const [lastActionMessage, setLastActionMessage] = useState('');
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isPitchDeckOpen, setIsPitchDeckOpen] = useState(false);
+  const [showAuthScreen, setShowAuthScreen] = useState(false);
 
   // Set default tab when role changes
   useEffect(() => {
@@ -63,7 +65,7 @@ function MainApp() {
       const res = await api.simulateBinSurge(binId, targetFill);
       if (res && res.bin) {
         setBins(prev => prev.map(b => b.id === binId ? res.bin : b));
-        setLastActionMessage(`🔥 Delhi Sensor Grid Surge: ${res.bin.bin_code} (${res.bin.name}) escalated to ${res.bin.currentFill}% (CRITICAL)`);
+        setLastActionMessage(`Delhi Sensor Grid Surge: ${res.bin.bin_code} (${res.bin.name}) escalated to ${res.bin.currentFill}% (CRITICAL)`);
       }
     } catch (err) {
       console.error(err);
@@ -78,7 +80,7 @@ function MainApp() {
       const res = await api.collectBin(binId);
       if (res && res.bin) {
         setBins(prev => prev.map(b => b.id === binId ? res.bin : b));
-        setLastActionMessage(`🚛 Emptied & Cleared ${res.bin.bin_code}. Reset to ${res.bin.currentFill}%`);
+        setLastActionMessage(`Emptied and Cleared ${res.bin.bin_code}. Reset to ${res.bin.currentFill}%`);
       }
     } catch (err) {
       console.error(err);
@@ -92,7 +94,7 @@ function MainApp() {
     try {
       await api.advanceTime(hours);
       await refreshData();
-      setLastActionMessage(`⏩ Telemetry fast-forwarded by +${hours} hours.`);
+      setLastActionMessage(`Telemetry fast-forwarded by +${hours} hours.`);
     } catch (err) {
       console.error(err);
     } finally {
@@ -105,7 +107,7 @@ function MainApp() {
     try {
       await api.resetSimulator();
       await refreshData();
-      setLastActionMessage('🔄 Delhi sensor grid reset to baseline initial seed state.');
+      setLastActionMessage('Delhi sensor grid reset to baseline initial seed state.');
     } catch (err) {
       console.error(err);
     } finally {
@@ -122,8 +124,28 @@ function MainApp() {
     );
   }
 
+  // Public Landing Page and Auth Flow
   if (!token || !user) {
-    return <AuthScreen />;
+    if (showAuthScreen) {
+      return <AuthScreen onBackToLanding={() => setShowAuthScreen(false)} />;
+    }
+
+    return (
+      <>
+        <LandingPage 
+          onLoginClick={() => setShowAuthScreen(true)} 
+          onLaunchDemo={() => setIsDemoModalOpen(true)} 
+        />
+
+        {/* Guided Interactive Demo Walkthrough Modal */}
+        <KillerDemoModal
+          isOpen={isDemoModalOpen}
+          onClose={() => setIsDemoModalOpen(false)}
+          onNavigateTab={() => setShowAuthScreen(true)}
+          onTriggerSurge={handleTriggerSurge}
+        />
+      </>
+    );
   }
 
   const criticalCount = bins.filter(b => b.status === 'CRITICAL' || b.currentFill >= 90).length;
@@ -132,7 +154,7 @@ function MainApp() {
     <div className="min-h-screen bg-dark-950 text-slate-100 flex flex-col justify-between selection:bg-emerald-500 selection:text-dark-950">
       
       <div>
-        {/* 1. Brand Navbar with 9 Features Navigation & Pitch Deck Trigger */}
+        {/* 1. Header with Hamburger Menu and Active View Indicator */}
         <Navbar
           activeTab={activeTab}
           setActiveTab={setActiveTab}

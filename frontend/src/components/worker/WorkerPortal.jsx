@@ -53,7 +53,7 @@ export default function WorkerPortal() {
       fillBefore: 'FILL BEFORE COLLECTION:',
       fillAfter: 'RECORD FILL POST-CLEANING (%)',
       notes: 'Field Verification Notes',
-      submit: 'Submit & Clear Bin ✓',
+      submit: 'Submit and Clear Bin',
       simulatedWa: 'Simulate WhatsApp Dispatch',
       offlineSync: 'Offline Storage Synced'
     },
@@ -70,7 +70,7 @@ export default function WorkerPortal() {
       fillBefore: 'संग्रहण से पहले भरा हुआ स्तर:',
       fillAfter: 'सफाई के बाद का स्तर दर्ज करें (%)',
       notes: 'सफाई निरीक्षक टिप्पणी',
-      submit: 'कचरा खाली करें और सत्यापित करें ✓',
+      submit: 'कचरा खाली करें और सत्यापित करें',
       simulatedWa: 'व्हाट्सएप संदेश भेजें',
       offlineSync: 'ऑफलाइन डेटा सुरक्षित'
     }
@@ -121,7 +121,7 @@ export default function WorkerPortal() {
           spread: 60,
           origin: { y: 0.7 }
         });
-        setActionSuccess(`✅ Task #${activeTask.id} completed! Bin emptied to ${fillAfter}%.`);
+        setActionSuccess(`Task #${activeTask.id} completed. Bin emptied to ${fillAfter}%.`);
         setActiveTask(null);
         setWorkerNotes('');
         loadTasks();
@@ -439,20 +439,23 @@ export default function WorkerPortal() {
             {/* Hindi WhatsApp Preview */}
             <div className="p-4 rounded-xl bg-[#0b141a] border border-emerald-600/40 text-slate-200 space-y-2">
               <div className="flex items-center justify-between text-emerald-400 text-[11px] pb-2 border-b border-white/10">
-                <span>📱 WhatsApp Broadcast (हिन्दी)</span>
+                <span className="flex items-center gap-1.5 font-bold">
+                  <Radio className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>WhatsApp Broadcast (हिन्दी)</span>
+                </span>
                 <span>To: +91 98112 34567</span>
               </div>
               <pre className="whitespace-pre-wrap font-sans text-xs leading-relaxed text-emerald-100">
-                {`🚨 स्वच्छरूट दिल्ली — नया कचरा संग्रहण कार्य
+                {`[MCD TASK ALERT] स्वच्छरूट दिल्ली — नया कचरा संग्रहण कार्य
 
 नमस्ते सुनील कुमार जी,
 वाहन DL-01-EA-4092 के लिए तत्काल कार्य:
 
-📍 स्थान: चांदनी चौक हेरिटेज वॉक
-⚠️ प्राथमिकता: अति महत्वपूर्ण (CRITICAL 94%)
-🗑️ कचरा: खाद्य व प्लास्टिक स्क्रैप (~460 kg)
-⏱️ ETA: 10 मिनट
-📲 कार्रवाई: ऐप खोलकर 'सफाई दर्ज करें' दबाएं।`}
+स्थान: चांदनी चौक हेरिटेज वॉक
+प्राथमिकता: अति महत्वपूर्ण (CRITICAL 94%)
+कचरा: खाद्य व प्लास्टिक स्क्रैप (~460 kg)
+ETA: 10 मिनट
+कार्रवाई: ऐप खोलकर 'सफाई दर्ज करें' दबाएं।`}
               </pre>
             </div>
 

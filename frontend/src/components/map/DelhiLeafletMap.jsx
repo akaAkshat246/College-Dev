@@ -82,7 +82,7 @@ const createLandfillIcon = (name, status) => {
         box-shadow: 0 0 16px ${color}80;
         cursor: pointer;
       ">
-        <span style="font-size: 14px;">⛰️</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
         <span style="color:${color};font-family:monospace;font-size:8px;">${name.split(' ')[0]}</span>
       </div>
     `,
@@ -108,7 +108,7 @@ const createDepotIcon = () => {
         box-shadow: 0 0 20px rgba(56,189,248,0.7);
         cursor: pointer;
       ">
-        <span style="font-size: 16px;">🏢</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M16 18h.01"/></svg>
         <span style="color:#38bdf8;font-family:monospace;font-size:8px;font-weight:bold;">DEPOT</span>
       </div>
     `,
@@ -133,7 +133,7 @@ const createTruckIcon = () => {
         box-shadow: 0 0 20px rgba(16,185,129,0.8);
         cursor: pointer;
       ">
-        <span style="font-size: 18px;">🚛</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
       </div>
     `,
     iconSize: [40, 40],
@@ -379,10 +379,10 @@ export default function DelhiLeafletMap({
             )}
           </div>
 
-          <div className="flex items-center gap-2 text-slate-400 text-[11px]">
-            <span>⛰️ 3 Landfills</span>
+          <div className="flex items-center gap-2 text-slate-400 text-[11px] font-mono">
+            <span>3 Landfills</span>
             <span>•</span>
-            <span>🏢 Depot Hub</span>
+            <span>Depot Hub</span>
             <span>•</span>
             <span>14 Smart Bins</span>
           </div>

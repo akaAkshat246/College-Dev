@@ -274,7 +274,7 @@ export default function RoutePlanner({ bins = [], onRouteGenerated = () => {} })
                     stop.urgencyRank === 'CRITICAL' ? 'bg-red-500/20 text-red-400' :
                     'bg-emerald-500/20 text-emerald-300'
                   }`}>
-                    {isLandfill ? '⛰️' : `#${stop.stopNumber}`}
+                    {isLandfill ? 'LF' : `#${stop.stopNumber}`}
                   </div>
 
                   <div className="flex-1 min-w-0">
@@ -314,7 +314,7 @@ export default function RoutePlanner({ bins = [], onRouteGenerated = () => {} })
                 <h4 className="text-sm font-bold text-white">Return to Central Municipal Depot Hub</h4>
                 <p className="text-xs text-slate-400 font-mono">Total shift duration: ~{routePlan.estimatedDurationMinutes} mins</p>
               </div>
-              <div className="text-right font-mono text-xs text-emerald-400 font-bold">Route Completed ✓</div>
+              <div className="text-right font-mono text-xs text-emerald-400 font-bold">Route Completed</div>
             </div>
 
           </div>

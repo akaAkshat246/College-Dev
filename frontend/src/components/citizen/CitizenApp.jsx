@@ -139,7 +139,7 @@ export default function CitizenApp() {
           spread: 70,
           origin: { y: 0.6 }
         });
-        setSuccessMsg(`🎉 Grievance Ticket #${data.id} submitted! +50 Karma Points awarded.`);
+        setSuccessMsg(`Grievance Ticket #${data.id} submitted successfully. +50 Karma Points awarded.`);
         loadData();
       }
     } catch (err) {

@@ -80,20 +80,25 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {[
-              { title: "Fixed-Schedule Pickups", desc: "Bins overflow in busy markets while empty trucks drive past empty bins.", icon: "🚛" },
-              { title: "Overloaded Landfills", desc: "Ghazipur, Bhalswa & Okhla face massive queue delays and mixed unsegregated waste.", icon: "⛰️" },
-              { title: "Chronic Illegal Dumping", desc: "Hotspots return repeatedly with zero data on why or when dumping happens.", icon: "⚠️" },
-              { title: "Unverified Grievances", desc: "Citizen complaints get closed on paper with no verifiable photo proof.", icon: "❌" },
-              { title: "Low Worker Tracking", desc: "Field trucks and crews lack digital turn navigation and accountability.", icon: "📱" }
-            ].map((prob, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-red-950/20 border border-red-500/20 flex items-start gap-3">
-                <span className="text-2xl">{prob.icon}</span>
-                <div>
-                  <h4 className="text-sm font-bold text-red-200">{prob.title}</h4>
-                  <p className="text-xs text-slate-400 mt-0.5">{prob.desc}</p>
+              { title: "Fixed-Schedule Pickups", desc: "Bins overflow in busy markets while empty trucks drive past empty bins.", icon: Truck },
+              { title: "Overloaded Landfills", desc: "Ghazipur, Bhalswa & Okhla face massive queue delays and mixed unsegregated waste.", icon: Scale },
+              { title: "Chronic Illegal Dumping", desc: "Hotspots return repeatedly with zero data on why or when dumping happens.", icon: AlertTriangle },
+              { title: "Unverified Grievances", desc: "Citizen complaints get closed on paper with no verifiable photo proof.", icon: ShieldCheck },
+              { title: "Low Worker Tracking", desc: "Field trucks and crews lack digital turn navigation and accountability.", icon: Radio }
+            ].map((prob, idx) => {
+              const ProbIcon = prob.icon;
+              return (
+                <div key={idx} className="p-3.5 rounded-xl bg-red-950/20 border border-red-500/20 flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0 text-red-400">
+                    <ProbIcon className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-red-200">{prob.title}</h4>
+                    <p className="text-xs text-slate-400 mt-0.5">{prob.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       ),
@@ -133,17 +138,23 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
         <div className="space-y-4 py-2">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center">
             <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30">
-              <span className="text-2xl block mb-2">🎯</span>
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center mb-2">
+                <Trash2 className="w-5 h-5" />
+              </div>
               <h4 className="text-xs font-bold text-emerald-300 uppercase font-mono">1. Dynamic Dispatch</h4>
               <p className="text-xs text-slate-300 mt-1">Collect only bins that are full or about to overflow.</p>
             </div>
             <div className="p-4 rounded-xl bg-cyan-950/30 border border-cyan-500/30">
-              <span className="text-2xl block mb-2">⚡</span>
+              <div className="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 mx-auto flex items-center justify-center mb-2">
+                <Truck className="w-5 h-5" />
+              </div>
               <h4 className="text-xs font-bold text-cyan-300 uppercase font-mono">2. Dijkstra + Landfill</h4>
               <p className="text-xs text-slate-300 mt-1">Shortest route with dynamic weighbridge queue balancing.</p>
             </div>
             <div className="p-4 rounded-xl bg-amber-950/30 border border-amber-500/30">
-              <span className="text-2xl block mb-2">🛡️</span>
+              <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center mb-2">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
               <h4 className="text-xs font-bold text-amber-300 uppercase font-mono">3. Verifiable Proof</h4>
               <p className="text-xs text-slate-300 mt-1">AI verified Before/After photos with SHA-256 certificate.</p>
             </div>
@@ -434,7 +445,7 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
       content: (
         <div className="space-y-2 text-xs py-2">
           {[
-            { phase: "Phase 1: Prototype (Weeks 1-6)", gate: "Beats naive route by >20% in simulation.", status: "COMPLETED ✓" },
+            { phase: "Phase 1: Prototype (Weeks 1-6)", gate: "Beats naive route by >20% in simulation.", status: "COMPLETED [VALIDATED]" },
             { phase: "Phase 2: Pilot Core (Weeks 7-16)", gate: "Sensors in pilot ward, multi-truck planner, worker app.", status: "IN PROGRESS" },
             { phase: "Phase 3: Trust Layer (Weeks 17-26)", gate: "80% complaints closed with AI photo proof.", status: "PLANNED" },
             { phase: "Phase 4: City Scale (Weeks 27-40)", gate: "Handover to MCD across all 12 zones.", status: "PLANNED" }
@@ -498,7 +509,9 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
       content: (
         <div className="space-y-3 py-2 text-xs">
           <div className="p-3.5 rounded-xl bg-dark-900 border border-white/10 flex items-start gap-3">
-            <span className="text-emerald-400 text-lg">🏛️</span>
+            <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+              <Building2 className="w-4 h-4" />
+            </div>
             <div>
               <h4 className="font-bold text-white">1 Pilot Ward & Sanitation Crew</h4>
               <p className="text-slate-400 mt-0.5">90-day trial in Ward 112 (Connaught Place) or Ward 82 (Karol Bagh).</p>
@@ -506,7 +519,9 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
           </div>
 
           <div className="p-3.5 rounded-xl bg-dark-900 border border-white/10 flex items-start gap-3">
-            <span className="text-cyan-400 text-lg">📊</span>
+            <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 flex-shrink-0">
+              <BarChart3 className="w-4 h-4" />
+            </div>
             <div>
               <h4 className="font-bold text-white">Access to Baseline Route & Grievance Logs</h4>
               <p className="text-slate-400 mt-0.5">To benchmark verified fuel and SLA improvements rigorously.</p>
@@ -514,7 +529,9 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
           </div>
 
           <div className="p-3.5 rounded-xl bg-dark-900 border border-white/10 flex items-start gap-3">
-            <span className="text-amber-400 text-lg">🤝</span>
+            <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+              <Users className="w-4 h-4" />
+            </div>
             <div>
               <h4 className="font-bold text-white">Designated MCD Sanitation Contact</h4>
               <p className="text-slate-400 mt-0.5">Weekly 15-minute review with Zonal Sanitation Officer.</p>
@@ -531,7 +548,9 @@ export default function PitchDeckViewer({ isOpen, onClose, onLaunchDemo = () => 
       category: "Conclusion",
       content: (
         <div className="text-center py-6 space-y-4">
-          <span className="text-3xl">🌱</span>
+          <div className="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center shadow-glow-sm">
+            <Trees className="w-7 h-7" />
+          </div>
           <h2 className="text-2xl font-heading font-black text-white">
             Smarter Routes. Cleaner Streets. A Healthier Delhi.
           </h2>

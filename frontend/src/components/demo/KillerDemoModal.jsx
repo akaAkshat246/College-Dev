@@ -37,7 +37,7 @@ const DEMO_SCENES = [
     highlight: 'Trigger the sensor surge event to observe instant system escalation.',
     triggerSurge: true,
     tabTarget: 'dashboard',
-    actionText: '🔥 Fire Sensor Surge on Bin #104 (68% → 91%)'
+    actionText: 'Trigger Sensor Surge on Bin #104 (68% → 91%)'
   },
   {
     step: 3,
@@ -46,7 +46,7 @@ const DEMO_SCENES = [
     icon: AlertTriangle,
     badge: 'TIME-SERIES AI',
     badgeColor: 'bg-red-500/20 text-red-300 border-red-500/40 shadow-glow-red',
-    description: 'NIRMAAN calculates the fill-velocity rate (8.4%/hr) and forecasts an imminent overflow in ~1.1 to 2.1 hours, auto-promoting the status to 🔴 CRITICAL.',
+    description: 'NIRMAAN calculates the fill-velocity rate (8.4%/hr) and forecasts an imminent overflow in ~1.1 to 2.1 hours, auto-promoting the status to CRITICAL.',
     highlight: 'Automated telemetry alert with zero human supervisor lag.',
     tabTarget: 'bins',
     actionText: 'Inspect Bin Telematics'
@@ -94,7 +94,7 @@ const DEMO_SCENES = [
     icon: Flame,
     badge: 'PREDICTIVE AI',
     badgeColor: 'bg-orange-500/20 text-orange-300 border-orange-500/40 shadow-glow-amber',
-    description: 'Multivariate AI analyzes weekend footfalls, food festivals, and historical trends: 🚨 Market Area has an 87% probability of becoming a garbage hotspot tomorrow with a 32% volume increase.',
+    description: 'Multivariate AI analyzes weekend footfalls, food festivals, and historical trends: Market Area has an 87% probability of becoming a garbage hotspot tomorrow with a 32% volume increase.',
     highlight: 'Municipality proactively schedules a 5-Ton compactor truck before overflow happens.',
     tabTarget: 'hotspots',
     actionText: 'View Hotspot Early Warning'

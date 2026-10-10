@@ -364,8 +364,8 @@ app.post('/api/simulator/reset', (req, res) => {
 // Start Server
 app.listen(PORT, () => {
   console.log(`====================================================`);
-  console.log(`🌱 SwachhRoute Delhi Municipal OS REST API`);
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📍 14 Delhi Localities, 3 Landfills, 12 MCD Wards active`);
+  console.log(`SwachhRoute Delhi Municipal OS REST API`);
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`14 Delhi Localities, 3 Landfills, 12 MCD Wards active`);
   console.log(`====================================================`);
 });

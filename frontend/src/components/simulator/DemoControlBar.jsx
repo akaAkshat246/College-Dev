@@ -57,7 +57,7 @@ export default function DemoControlBar({
             title="Simulate sudden garbage surge in Market Area (Bin #104 jumps from 68% to 91% CRITICAL)"
           >
             <Flame className="w-3.5 h-3.5 text-amber-200 group-hover:animate-bounce" />
-            <span>🔥 Surge Bin #104 (68% → 91%)</span>
+            <span>Surge Bin #104 (68% → 91%)</span>
           </button>
 
           {/* Advance Time +2h */}

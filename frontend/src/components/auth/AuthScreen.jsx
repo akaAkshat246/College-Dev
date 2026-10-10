@@ -15,11 +15,11 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
-export default function AuthScreen() {
+export default function AuthScreen({ onBackToLanding = () => {} }) {
   const { login } = useAuth();
   const [selectedRole, setSelectedRole] = useState('ADMIN');
   const [isRegister, setIsRegister] = useState(false);
-  const [email, setEmail] = useState('admin@nirmaan.delhi.gov.in');
+  const [email, setEmail] = useState('admin@swachhroute.delhi.gov.in');
   const [password, setPassword] = useState('admin123');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -34,7 +34,7 @@ export default function AuthScreen() {
       subtitle: 'City Command HQ',
       icon: Building2,
       desc: 'City-wide monitoring, telematics, predictive hotspots, worker dispatch, and ESG ledger.',
-      demoEmail: 'admin@nirmaan.delhi.gov.in',
+      demoEmail: 'admin@swachhroute.delhi.gov.in',
       demoPass: 'admin123',
       color: 'emerald',
       badge: 'GOVERNMENT / MCD'
@@ -45,7 +45,7 @@ export default function AuthScreen() {
       subtitle: 'Collection Fleet Operations',
       icon: Truck,
       desc: 'Assigned collection tasks, turn-by-turn routing, nearby critical bins, and live task completion.',
-      demoEmail: 'worker@nirmaan.delhi.gov.in',
+      demoEmail: 'worker@swachhroute.delhi.gov.in',
       demoPass: 'worker123',
       color: 'cyan',
       badge: 'FLEET CREW'
@@ -55,7 +55,7 @@ export default function AuthScreen() {
       title: 'DELHI CITIZEN',
       subtitle: 'Public Grievance Portal',
       icon: Users,
-      desc: 'Report roadside garbage with camera + GPS, track grievance status, and circular scrap valuation in ₹.',
+      desc: 'Report roadside garbage with camera + GPS, track grievance status, and circular scrap valuation in INR.',
       demoEmail: 'citizen@delhi.in',
       demoPass: 'citizen123',
       color: 'amber',
@@ -133,6 +133,18 @@ export default function AuthScreen() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
+      {/* Top Bar with Return to Landing Page */}
+      <div className="max-w-5xl mx-auto w-full flex items-center justify-between relative z-10 mb-4">
+        <button
+          onClick={onBackToLanding}
+          className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-dark-900 border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-white text-xs font-mono transition-all"
+        >
+          <span>← Return to Pitch Deck / Landing Page</span>
+        </button>
+
+        <span className="text-xs font-mono text-slate-500">MCD Auth Gateway v2.4</span>
+      </div>
+
       {/* Top Header */}
       <div className="max-w-5xl mx-auto w-full text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold uppercase tracking-widest shadow-glow-sm mb-4">
@@ -141,7 +153,7 @@ export default function AuthScreen() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl font-heading font-black text-white tracking-tight">
-          NIRMAAN
+          SwachhRoute <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Delhi</span>
         </h1>
         <p className="text-base sm:text-lg text-slate-300 mt-2 font-medium max-w-xl mx-auto">
           AI-Powered Municipal Waste Intelligence & Smart Fleet Operations Platform
@@ -253,7 +265,7 @@ export default function AuthScreen() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-dark-900 border border-white/10 rounded-xl text-white focus:outline-none focus:border-emerald-500 font-mono"
-                  placeholder="name@nirmaan.delhi.gov.in"
+                  placeholder="name@swachhroute.delhi.gov.in"
                   required
                 />
               </div>
@@ -301,7 +313,7 @@ export default function AuthScreen() {
 
       {/* Footer Disclaimer */}
       <div className="text-center text-[11px] font-mono text-slate-500 relative z-10">
-        NIRMAAN AI Waste OS • NCT of Delhi Municipal Corporation • Secure JWT Session
+        SwachhRoute Delhi • Team CodeGoblins • NCT of Delhi Municipal Corporation • Secure JWT Session
       </div>
 
     </div>

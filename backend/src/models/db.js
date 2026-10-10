@@ -187,7 +187,7 @@ class DelhiDatabase {
         distanceKm: 2.8,
         etaMinutes: 10,
         laneWidth: 'NARROW',
-        notes: '🚨 Immediate clearance required before evening wholesale crowd.',
+        notes: 'Immediate clearance required before evening wholesale crowd.',
         createdAt: new Date(Date.now() - 3600000 * 2).toISOString(),
         completedAt: null
       },
@@ -314,7 +314,7 @@ class DelhiDatabase {
           { status: 'SUBMITTED', title: 'Report Logged by Citizen', time: '08:30 AM' },
           { status: 'UNDER_REVIEW', title: 'AI Verification Passed', time: '08:31 AM' },
           { status: 'ASSIGNED', title: 'Task Scheduled on Priority Max-Heap', time: '08:45 AM' },
-          { status: 'RESOLVED', title: 'Photo Verified Cleaned & Certificate Issued ✓', time: '09:40 AM' }
+          { status: 'RESOLVED', title: 'Photo Verified Cleaned and Certificate Issued', time: '09:40 AM' }
         ],
         createdAt: new Date(Date.now() - 3600000 * 4).toISOString()
       }
@@ -325,7 +325,7 @@ class DelhiDatabase {
         id: 'NTF-01',
         userId: 'USR-ADMIN-01',
         role: 'ADMIN',
-        title: '🚨 Critical Bin Alert: Chandni Chowk',
+        title: 'Critical Bin Alert: Chandni Chowk',
         message: 'Bin #DL-CC-102 reached 94% capacity. Estimated overflow in ~0.9 hours.',
         type: 'CRITICAL',
         read: false,
@@ -335,7 +335,7 @@ class DelhiDatabase {
         id: 'NTF-02',
         userId: 'USR-WORKER-01',
         role: 'WORKER',
-        title: '🚛 New Critical Dispatch: Chandni Chowk',
+        title: 'New Critical Dispatch: Chandni Chowk',
         message: 'Task #TSK-9101 assigned to vehicle DL-01-EA-4092. Narrow lane guidance enabled.',
         type: 'ACTION_REQUIRED',
         read: false,
@@ -431,7 +431,7 @@ class DelhiDatabase {
         if (resolutionCertificate) report.resolutionCertificate = resolutionCertificate;
         report.timeline.push({
           status: 'RESOLVED',
-          title: 'Waste Collected & Cleanliness Verified ✓',
+          title: 'Waste Collected and Cleanliness Verified',
           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         });
       }
@@ -480,7 +480,7 @@ class DelhiDatabase {
       status,
       title: status === 'ASSIGNED' ? `Assigned to MCD Operator ${workerName || 'Staff'}` :
              status === 'IN_PROGRESS' ? 'Collection Team Dispatched' :
-             status === 'RESOLVED' ? 'Issue Resolved & Cleanliness Certified ✓' : 'Status Updated',
+             status === 'RESOLVED' ? 'Issue Resolved and Cleanliness Certified' : 'Status Updated',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     });
 

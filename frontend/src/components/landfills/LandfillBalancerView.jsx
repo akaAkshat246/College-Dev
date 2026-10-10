@@ -97,7 +97,7 @@ export default function LandfillBalancerView() {
             >
               {isOptimal && (
                 <div className="absolute top-0 right-0 bg-emerald-500 text-dark-950 px-3 py-0.5 text-[10px] font-mono font-black uppercase rounded-bl-lg">
-                  AI Recommended Target ✓
+                  AI Recommended Target
                 </div>
               )}
 
@@ -236,7 +236,7 @@ export default function LandfillBalancerView() {
 
               <div className="p-3 rounded-lg bg-emerald-950/30 border border-emerald-500/30">
                 <span className="text-emerald-400 block text-[10px]">SwachhRoute Balanced Dispatch</span>
-                <span className="text-emerald-300 font-bold block">{optimal.name} ✓</span>
+                <span className="text-emerald-300 font-bold block">{optimal.name}</span>
                 <span className="text-slate-300 text-[11px]">
                   {optimal.distanceFromTruckKm} km • {optimal.queueWaitMinutes} min queue • Total: {optimal.totalTurnaroundMinutes} mins
                 </span>

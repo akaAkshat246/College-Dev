@@ -124,7 +124,7 @@ export default function OverviewView({
             <span className="text-xs text-red-300 font-mono">Bins &gt; 90%</span>
           </div>
           <span className="text-[11px] text-red-300 font-mono block mt-1.5 font-bold">
-            {criticalBins.length > 0 ? '⚠ Immediate Dispatch Req' : '✓ Zero Overflows'}
+            {criticalBins.length > 0 ? 'Immediate Dispatch Required' : 'Zero Overflows Verified'}
           </span>
         </div>
 
